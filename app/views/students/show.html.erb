@@ -1,2 +1,9 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1><%= @student.name %></h1>
+<h2>GPA: <%= @student.gpa %></h2>
+<h2>Student ID: <%= @student.student_number %></h2>
+
+
+<hr>
+<%= link_to 'Back', root_path %> |
+<%= link_to 'Edit Student', edit_school_student_path(@school) %> |
+<%= link_to 'Delete', [@school, @student], method: :delete %> |

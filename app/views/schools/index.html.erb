@@ -1,2 +1,7 @@
-<h1>Schools#index</h1>
-<p>Find me in app/views/schools/index.html.erb</p>
+<h1>County Schools</h1>
+<hr>
+<% @schools.each do |school| %>
+    <h2> <%= link_to school.name, school %></h2>
+<% end %>
+<hr>
+<%= link_to 'Add School', new_school_path %>
