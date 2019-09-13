@@ -46,6 +46,10 @@ class SchoolsController < ApplicationController
 
     def school_params
       params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
+    end
+
+    def school_params
+      params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
     # Only allow a trusted parameter "white list" through.
     end
  end
