@@ -1,2 +1,18 @@
-<h1>Schools#show</h1>
-<p>Find me in app/views/schools/show.html.erb</p>
+<h1>Name: <%= @school.name %></h1>
+<h2>Principal: <%= @school.principal %> </h2>
+
+<%= @school.address %>
+<%= @school.capacity %>
+<%= @school.private_school %>
+
+<hr>
+  <% @school.students.each do |student| %>
+      <h3><%= link_to student.name, [@school, student] %>     <button><%= link_to 'Info', [@school, student] %></button> </h3>
+  <% end %>
+<hr>
+
+<%= link_to 'Back', root_path %> |
+<%= link_to 'Update School Details', edit_school_path %> |
+<%= link_to 'Delete', @school, method: :delete %> |
+<hr>
+<%= link_to 'Add Student', new_school_student_path(@school) %>

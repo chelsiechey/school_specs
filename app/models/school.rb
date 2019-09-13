@@ -2,5 +2,5 @@ class School < ApplicationRecord
   # Validations
   
   # Associations
-  has_many :students
+  has_many :students, dependent: :destroy
 end

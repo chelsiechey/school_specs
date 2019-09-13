@@ -1,2 +1,17 @@
 <h1>Students#new</h1>
 <p>Find me in app/views/students/new.html.erb</p>
+
+<%= form_for [@school, @student] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, class: 'form-control' %>
+    <br>
+    <%= f.label :student_number %>
+    <%= f.text_field :student_number, required: true, class: 'form-control' %>
+    <br>
+    <%= f.label :gpa %>
+    <%= f.text_field :gpa, required: true, class: 'form-control' %>
+    <br>
+
+    <br>
+    <%= f.submit %>
+<% end %>

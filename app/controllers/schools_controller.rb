@@ -6,7 +6,6 @@ class SchoolsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -23,7 +22,7 @@ class SchoolsController < ApplicationController
   end
 
   def edit
-
+    render :new
   end
 
   def update
@@ -39,9 +38,7 @@ class SchoolsController < ApplicationController
     redirect_to schools_path
   end
 
-
   private
-
     # Use callbacks to share common setup or constraints between actions.
     def set_school
       @school = School.find(params[:id])
@@ -51,6 +48,8 @@ class SchoolsController < ApplicationController
       params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
     end
 
+    def school_params
+      params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
     # Only allow a trusted parameter "white list" through.
-
-end
+    end
+ end

@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe Student, type: :model do
   # describe 'attributes' do
   #   it 'has a name' do
@@ -50,4 +51,3 @@ RSpec.describe Student, type: :model do
 
 
 end
-
