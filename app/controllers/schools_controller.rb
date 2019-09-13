@@ -6,6 +6,10 @@ class SchoolsController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6902072ddbe577d33cb4f0ab3368b26312bc963d
   end
 
   def new
@@ -22,6 +26,10 @@ class SchoolsController < ApplicationController
   end
 
   def edit
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6902072ddbe577d33cb4f0ab3368b26312bc963d
   end
 
   def update
@@ -36,12 +44,23 @@ class SchoolsController < ApplicationController
     @school.destroy
     redirect_to schools_path
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6902072ddbe577d33cb4f0ab3368b26312bc963d
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_school
       @school = School.find(params[:id])
     end
+<<<<<<< HEAD
+=======
+
+    def school_params
+      params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
+    end
+>>>>>>> 6902072ddbe577d33cb4f0ab3368b26312bc963d
 
     def school_params
       params.require(:school).permit(:name, :address, :principal, :capacity, :private_school)
